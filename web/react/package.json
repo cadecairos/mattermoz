@@ -22,6 +22,7 @@
     "watchify": "3.6.1",
     "eslint": "1.9.0",
     "eslint-plugin-react": "3.9.0",
+    "escope": "^3.3.0",
     "exorcist": "0.4.0",
     "babel-eslint": "4.1.5"
   },
