@@ -44,6 +44,9 @@ type ServiceSettings struct {
 	SessionCacheInMinutes       *int
 	WebsocketSecurePort         *int
 	WebsocketPort               *int
+	EnableHSTS                  bool
+	HSTSMaxAge                  *int
+	HSTSIncludeSubDomains       *bool
 }
 
 type SSOSettings struct {
@@ -370,6 +373,16 @@ func (o *Config) SetDefaults() {
 	if o.ServiceSettings.WebsocketSecurePort == nil {
 		o.ServiceSettings.WebsocketSecurePort = new(int)
 		*o.ServiceSettings.WebsocketSecurePort = 443
+	}
+
+	if o.ServiceSettings.HSTSMaxAge == nil {
+		o.ServiceSettings.HSTSMaxAge = new(int)
+		*o.ServiceSettings.HSTSMaxAge = 2592000
+	}
+
+	if o.ServiceSettings.HSTSIncludeSubDomains == nil {
+		o.ServiceSettings.HSTSIncludeSubDomains = new(bool)
+		*o.ServiceSettings.HSTSIncludeSubDomains = false
 	}
 }
 

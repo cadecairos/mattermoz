@@ -47,6 +47,16 @@ The port to use for secure websocket connections being initiated from the client
 ```"WebsocketPort": 80```
 The port to use for websocket connections being initiated from the client. By default ws:// uses port 80.
 
+Headers to all outgoing responses when enabled
+```"EnableHSTS" : false```
+"true": Strict-Transport-Security Headers are added to every server response
+
+```"HSTSMaxAge" : 2592000```
+Set the number of seconds the browser should remember to use https when connecting.
+
+```"HSTSIncludeSubDomains" : false```
+"true": this rule applies to all of the site's subdomains
+
 
 #### Webhooks
 
